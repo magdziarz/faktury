@@ -1,0 +1,75 @@
+﻿<Window x:Class="ServiceOfOrder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceOfOrder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="825">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+
+
+            <RowDefinition Height="*" />
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="125" />
+            <ColumnDefinition Width="125" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+
+        </Grid.ColumnDefinitions>
+        <Button   Grid.Row ="1"   Grid.Column="1"    Content="Otwórz zamówienia"         Tag="openFile"       Margin="3"      Click="OpenFile"  />
+        <Button   Grid.Row ="3"   Grid.Column="1"    Content = "Stwórz raport" Tag ="CreateReport"  Margin="3" Click="CreateReport"  />
+       
+
+        <RadioButton x:Name= "RBa" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Content="ilość zamówień"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBc" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Content="łączna kwota zamówień"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBe" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Content="lista wszystkich zamówień"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name= "RBg" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" Content="średnia wartość zamówienia"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton  x:Name= "RBi" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" Content="ilość zamówień wg nazw"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBk" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Content="podaj przedział cenowy zamówień"   Grid.RowSpan="9" Margin="20,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name= "TBmin" Grid.Row ="10"    Grid.Column="1" Margin="30,3,10,2"  />
+        <TextBox x:Name= "TBmax" Grid.Row ="10"    Grid.Column="2" Margin="10,3,30,2" />
+        <Label  Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="2" Content="Wybierz Id klienta"   Grid.RowSpan="9" Margin="0,00,0,0" />
+
+
+        <ComboBox Grid.Row ="12"   Grid.Column="2" Margin="10,2,10,0" Name="BoxIDClient"  />
+        <RadioButton x:Name= "RBb" Grid.Column="1" Grid.Row="13"  Grid.ColumnSpan="2" Content="ilośc zamówień klienta"   Grid.RowSpan="9" Margin="40,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBd" Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="2" Content="Kwota zamówień klienta"   Grid.RowSpan="9" Margin="40,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBf" Grid.Column="1" Grid.Row="15" Grid.ColumnSpan="2" Content="lista zamówień klienta"   Grid.RowSpan="9" Margin="40,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBh" Grid.Column="1" Grid.Row="16" Grid.ColumnSpan="2" Content="średnia wartość zamówienia klienta"   Grid.RowSpan="9" Margin="40,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <RadioButton x:Name= "RBj" Grid.Column="1" Grid.Row="17" Grid.ColumnSpan="2" Content="ilość zamówień wg nazwy dla klienta"   Grid.RowSpan="9" Margin="40,10,0,0"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+        <TextBox x:Name="TextBox" Grid.Column="3"  Grid.Row="1"/>
+        <DataGrid x:Name="DataGridTabela" Grid.Column="3"  Grid.Row="2" Grid.RowSpan="17" Margin="20,0,10,20">
+            <!--explicit equivalent
+            <DataGridTextColumn x:Name="Numer" Header="Numer" Binding ="{Binding Path=Numer}"  />
+             --> 
+        </DataGrid>
+      
+
+
+    </Grid>
+</Window>
